@@ -18,7 +18,7 @@ module TSPScraper
         }
       }
       options = default_options.merge(options)
-      
+
       response = self.get("/index.html", options)
       csv = response.body.strip
     end
