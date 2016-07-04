@@ -12,7 +12,7 @@ gem install tsp_scraper
 
 ## Usage
 
-The `scrape` method returns data in a hash:
+The `scrape` method returns data in an array of hashes:
 
 ```ruby
 require 'tsp_scraper'
@@ -20,7 +20,7 @@ TSPScraper::Client.scrape() # Get trailing one month's prices
 TSPScraper::Client.scrape("2016-01-01", "2016-01-31") # Get January prices
 ```
 
-The returned hash has the format:
+The returned array of hashes has the format:
 
 ```
 [
