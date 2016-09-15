@@ -17,6 +17,7 @@ The `scrape` method returns data in an array of hashes:
 ```ruby
 require 'tsp_scraper'
 TSPScraper::Client.scrape() # Get trailing one month's prices
+TSPScraper::Client.scrape("2016-01-04") # Get prices for a specific date
 TSPScraper::Client.scrape("2016-01-01", "2016-01-31") # Get January prices
 ```
 
@@ -51,7 +52,7 @@ The returned array of hashes has the format:
 ]
 ```
 
-You can get the raw CSV data as returned by the TSP website by using `TSPScraper::Client.scrape_raw()`.
+You can get the raw CSV data as returned by the TSP website by using `TSPScraper::Client.scrape_raw()`, which accepts the same parameters as the `scrape` method.
 
 The `scrape` and `scrape_raw` methods also accept an options hash for the HTTP request. The options hash should contain [HTTParty](https://github.com/jnunemaker/httparty) options.
 
