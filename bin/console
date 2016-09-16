@@ -1,3 +1,10 @@
-#!/usr/bin/env sh
+#!/usr/bin/env ruby
 
-irb -Ilib -rtsp_scraper
+require "bundler/setup"
+require "tsp_scraper"
+
+require "pry"
+Pry.start
+
+#require "irb"
+#IRB.start
