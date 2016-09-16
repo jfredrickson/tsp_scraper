@@ -12,12 +12,11 @@ gem install tsp_scraper
 
 ## Usage
 
-The `scrape` methods accept `Date` objects as parameters and return TSP price data as an array of hashes:
+The `scrape` method accepts `Date` objects as parameters and returns TSP price data as an array of hashes:
 
 ```ruby
 require 'tsp_scraper'
 TSPScraper::Client.scrape() # Get trailing one month's prices
-TSPScraper::Client.scrape(date) # Get prices for a specific date
 TSPScraper::Client.scrape(start_date, end_date) # Get January prices
 ```
 

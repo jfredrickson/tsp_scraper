@@ -6,10 +6,6 @@ module TSPScraper
     disable_rails_query_string_format
     base_uri "https://www.tsp.gov/InvestmentFunds/FundPerformance"
 
-    def self.scrape_raw(date = Date.today, options = {})
-      self.scrape_raw(date, date, options)
-    end
-
     def self.scrape_raw(start_date = Date.today.prev_month, end_date = Date.today, options = {})
       funds = ["Linc", "L2010", "L2020", "L2030", "L2040", "L2050", "G", "F", "C", "S", "I"]
       default_options = {
@@ -25,10 +21,6 @@ module TSPScraper
 
       response = self.get("/index.html", options)
       response.body.strip
-    end
-
-    def self.scrape(date = Date.today, options = {})
-      self.scrape(date, date, options)
     end
 
     def self.scrape(start_date = Date.today.prev_month, end_date = Date.today, options = {})
