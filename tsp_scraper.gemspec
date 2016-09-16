@@ -10,12 +10,14 @@ Gem::Specification.new do |s|
   s.version = TSPScraper::VERSION
   s.authors = ['Jeff Fredrickson']
   s.email = %w(jeff.fredrickson@gmail.com)
-  s.files = `git ls-files -z`.split("\x0")
+  s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   s.require_paths = ['lib']
   s.license = 'MIT'
   s.required_ruby_version = '>= 1.9.3'
   s.executables = ['tsp_scraper']
 
   s.add_runtime_dependency 'httparty', '~> 0.13'
+  s.add_development_dependency 'rake', '~> 10.0'
   s.add_development_dependency 'pry', '~> 0.10'
+  s.add_development_dependency 'minitest', '~> 5.9'
 end
