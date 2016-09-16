@@ -25,28 +25,28 @@ The returned array of hashes has the format:
 ```
 [
   {
-    date: DATE1,
-    funds: [
-      { fund: "FUND NAME 1", price: "12.3456" },
-      { fund: "FUND NAME 2", price: "12.3456" },
-      { fund: "FUND NAME 3", price: "12.3456" }
-    ]
+    :date => DATE1,
+    :funds => {
+      "FUND NAME 1" => #<BigDecimal>,
+      "FUND NAME 2" => #<BigDecimal>,
+      "FUND NAME 3" => #<BigDecimal>
+    }
   },
   {
-    date: DATE2,
-    funds: [
-      { fund: "FUND NAME 1", price: "12.3456" },
-      { fund: "FUND NAME 2", price: "12.3456" },
-      { fund: "FUND NAME 3", price: "12.3456" }
-    ]
+    :date => DATE2,
+    :funds => {
+      "FUND NAME 1" => #<BigDecimal>,
+      "FUND NAME 2" => #<BigDecimal>,
+      "FUND NAME 3" => #<BigDecimal>
+    }
   },
   {
-    date: DATE3,
-    funds: [
-      { fund: "FUND NAME 1", price: "12.3456" },
-      { fund: "FUND NAME 2", price: "12.3456" },
-      { fund: "FUND NAME 3", price: "12.3456" }
-    ]
+    :date => DATE3,
+    :funds => {
+      "FUND NAME 1" => #<BigDecimal>,
+      "FUND NAME 2" => #<BigDecimal>,
+      "FUND NAME 3" => #<BigDecimal>
+    }
   }
 ]
 ```

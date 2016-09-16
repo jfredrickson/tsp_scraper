@@ -12,10 +12,10 @@ module TSPScraper
       raw_data.each do |d|
         hash = {
           date: Date.parse(d.first),
-          funds: []
+          funds: {}
         }
         headers.each_with_index do |header, index|
-          hash[:funds].push({ fund: header, price: BigDecimal.new(d[index]) }) unless index == 0
+          hash[:funds][header] = BigDecimal.new(d[index]) unless index == 0
         end
         data.push(hash)
       end
