@@ -1,6 +1,7 @@
 # tsp_scraper
 
 [![Gem Version](https://badge.fury.io/rb/tsp_scraper.svg)](https://badge.fury.io/rb/tsp_scraper)
+[![Travis CI](https://travis-ci.org/jfredrickson/tsp_scraper.svg?branch=master)](https://travis-ci.org/jfredrickson/tsp_scraper)
 
 Scrapes fund price history from the TSP.gov website.
 
