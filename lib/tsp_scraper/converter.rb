@@ -15,7 +15,13 @@ module TSPScraper
           funds: {}
         }
         headers.each_with_index do |header, index|
-          hash[:funds][header] = BigDecimal.new(d[index]) unless index == 0
+          next if index == 0
+          if d[index].empty?
+            value = nil
+          else
+            value = BigDecimal(d[index])
+          end
+          hash[:funds][header] = value
         end
         data.push(hash)
       end
