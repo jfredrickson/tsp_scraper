@@ -13,12 +13,12 @@ Gem::Specification.new do |s|
   s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   s.require_paths = ['lib']
   s.license = 'MIT'
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 2.4.0'
   s.executables = ['tsp_scraper']
 
-  s.add_runtime_dependency 'httparty', '~> 0.13'
-  s.add_development_dependency 'bundler', '~> 1.3'
-  s.add_development_dependency 'rake', '~> 10.0'
-  s.add_development_dependency 'pry', '~> 0.10'
-  s.add_development_dependency 'minitest', '~> 5.9'
+  s.add_runtime_dependency 'httparty', '~> 0.17.1'
+  s.add_development_dependency 'bundler', '~> 2.0.2'
+  s.add_development_dependency 'rake', '~> 13.0.0'
+  s.add_development_dependency 'pry', '~> 0.12.2'
+  s.add_development_dependency 'minitest', '~> 5.12.2'
 end
