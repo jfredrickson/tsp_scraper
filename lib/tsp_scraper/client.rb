@@ -4,22 +4,21 @@ module TSPScraper
   class Client
     include HTTParty
     disable_rails_query_string_format
-    base_uri "https://www.tsp.gov/InvestmentFunds/FundPerformance"
+    base_uri "https://secure.tsp.gov/components/CORS"
 
     def self.scrape_raw(start_date = Date.today.prev_month, end_date = Date.today, options = {})
-      funds = ["Linc", "L2010", "L2020", "L2030", "L2040", "L2050", "G", "F", "C", "S", "I"]
       default_options = {
         query: {
-          reloaded: 1,
-          startdate: start_date.strftime("%m/%d/%Y"),
-          enddate: end_date.strftime("%m/%d/%Y"),
-          whichButton: "CSV",
-          fundgroup: funds
+          download: 1,
+          startdate: start_date.strftime("%Y%m%d"),
+          enddate: end_date.strftime("%Y%m%d"),
+          format: "CSV",
+          Lfunds: 1,
+          InvFunds: 1
         }
       }
       options = default_options.merge(options)
-
-      response = self.get("/index.html", options)
+      response = self.get("/getSharePrices.html", options)
       response.body.strip
     end
 
