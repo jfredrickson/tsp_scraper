@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.executables = ['tsp_scraper']
 
   s.add_runtime_dependency 'httparty', '~> 0.17.1'
-  s.add_development_dependency 'bundler', '~> 2.0.2'
+  s.add_development_dependency 'bundler', '~> 2.1.4'
   s.add_development_dependency 'rake', '~> 13.0.0'
   s.add_development_dependency 'pry', '~> 0.12.2'
   s.add_development_dependency 'minitest', '~> 5.12.2'
